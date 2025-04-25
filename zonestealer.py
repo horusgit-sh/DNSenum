@@ -7,10 +7,6 @@ import argparse
 
 NS = dr.Resolver()
 
-Domain = 'inlanefreight.com'
-
-NS.nameservers = ['ns1.inlanefreight.com', 'ns2.inlanefreight.com']
-
 Subdomains = []
 
 def AXFR(domain, nameserver):
@@ -46,7 +42,6 @@ if __name__=="__main__":
         print(parser.print_help())
         exit()
 
-        # Variables
     Domain = args.d
     NS.nameservers = list(args.n.split(","))
 
